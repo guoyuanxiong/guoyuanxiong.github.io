@@ -1,0 +1,154 @@
+<details class="pub-year"><summary>2021<span>7 publications</span></summary><div class="year-papers"><article class="paper" id="publication-J29" data-cv-id="J29" data-year="2021">
+ <p class="publication-type">Journal article</p>
+ <h3>Data-Driven Caching with Users’ Content Preference Privacy in Information-Centric Networks</h3>
+ <p class="authors">X. Zhang, H. Li, J. Wang, Y. Guo, Q. Pei, P. Li, and M. Pan</p>
+ <p class="venue">IEEE Transactions on Wireless Communications (TWC), vol. 20, no. 9, pp. 5744–5753, September 2021.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9397377" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/zhang2021data_TWC.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Information-centric networking (ICN) as an emerging networking paradigm has recently gained significant attention, due to the improvement of content delivery efficiency. The built-in network storage for caching is a key component in ICN to provide low latency service and reduce high backhaul traffic by caching popular content. However, users’ content preference contains individual sensitive characteristics which is distinguishable from others. Therefore, in this work, we propose a data-driven caching revenue maximization problem with the considerations of users’ local differential privacy. Specifically, we employ dBitFlip, a local differential privacy (LDP) mechanism, to locally add differential private noise to the users’ preference content information. We leverage data-driven approach to predict the content popularity based on the reference distribution constructed by the reported noisy preference content data from users, mathematically present the distance between the noisy reference distribution and the true distribution by the tolerance level, and prove the relationship among the tolerance level, differential privacy budget and the confidence level. We provide feasible solutions to the proposed revenue maximization problem, and conduct simulations to show the effectiveness of the proposed scheme.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{zhang2021datadriven,
+  author  = {X. Zhang and H. Li and J. Wang and Y. Guo and Q. Pei and P. Li and M. Pan},
+  title   = {{Data-Driven Caching with Users&#x27; Content Preference Privacy in Information-Centric Networks}},
+  journal = {IEEE Transactions on Wireless Communications (TWC)},
+  volume  = {20},
+  number  = {9},
+  pages   = {5744--5753},
+  month   = sep,
+  year    = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-C29" data-cv-id="C29" data-year="2021">
+ <p class="publication-type">Conference paper</p>
+ <h3>Federated Learning with Sparsification-Amplified Privacy and Adaptive Optimization</h3>
+ <p class="authors">R. Hu, Y. Gong, and Y. Guo</p>
+ <p class="venue">The 30th International Joint Conference on Artificial Intelligence (IJCAI-21), August 21 – 26, 2021.</p>
+ <div class="paper-links"><a href="https://www.ijcai.org/proceedings/2021/202" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/hu2021federated_IJCAI.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Federated learning (FL) enables distributed agents to collaboratively learn a centralized model without sharing their raw data with each other. However, data locality does not provide sufficient privacy protection, and it is desirable to facilitate FL with rigorous differential privacy (DP) guarantee. Existing DP mechanisms would introduce random noise with magnitude proportional to the model size, which can be quite large in deep neural networks. In this paper, we propose a new FL framework with sparsification-amplified privacy. Our approach integrates random sparsification with gradient perturbation on each agent to amplify privacy guarantee. Since sparsification would increase the number of communication rounds required to achieve a certain target accuracy, which is unfavorable for DP guarantee, we further introduce acceleration techniques to help reduce the privacy cost. We rigorously analyze the convergence of our approach and utilize Renyi DP to tightly account the end-to-end DP guarantee. Extensive experiments on benchmark datasets validate that our approach outperforms previous differentially-private FL approaches in both privacy guarantee and communication efficiency.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@inproceedings{hu2021federated,
+  author    = {R. Hu and Y. Gong and Y. Guo},
+  title     = {{Federated Learning with Sparsification-Amplified Privacy and Adaptive Optimization}},
+  booktitle = {The 30th International Joint Conference on Artificial Intelligence (IJCAI-21)},
+  month     = aug,
+  year      = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J27" data-cv-id="J27" data-year="2021">
+ <p class="publication-type">Journal article</p>
+ <h3>Concentrated Differentially Private Federated Learning with Performance Analysis</h3>
+ <p class="authors">R. Hu, Y. Guo, and Y. Gong</p>
+ <p class="venue">IEEE Open Journal of the Computer Society (OJ-CS), vol. 2, pp. 276–289, July 2021.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9495177" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/hu2021concentrated_OJCS.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Federated learning engages a set of edge devices to collaboratively train a common model without sharing their local data and has advantage in user privacy over traditional cloud-based learning approaches. However, recent model inversion attacks and membership inference attacks have demonstrated that shared model updates during the interactive training process could still leak sensitive user information. Thus, it is desirable to provide rigorous differential privacy (DP) guarantee in federated learning. The main challenge to providing DP is to maintain high utility of federated learning model with repeatedly introduced randomness of DP mechanisms, especially when the server is not fully trusted. In this paper, we investigate how to provide DP to the most widely adopted federated learning scheme, federated averaging. Our approach combines local gradient perturbation, secure aggregation, and zero-concentrated differential privacy (zCDP) for better utility and privacy protection without a trusted server. We jointly consider the performance impacts of randomnesses introduced by the DP mechanism, client sampling and data subsampling in our approach, and theoretically analyze the convergence rate and end-to-end DP guarantee with non-convex loss functions. We also demonstrate that our proposed method has good utility-privacy trade-off through extensive numerical experiments on the real-world dataset.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{hu2021concentrated,
+  author  = {R. Hu and Y. Guo and Y. Gong},
+  title   = {{Concentrated Differentially Private Federated Learning with Performance Analysis}},
+  journal = {IEEE Open Journal of the Computer Society (OJ-CS)},
+  volume  = {2},
+  pages   = {276--289},
+  month   = jul,
+  year    = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J30" data-cv-id="J30" data-year="2021">
+ <p class="publication-type">Journal article</p>
+ <h3>Incentivizing Differentially Private Federated Learning: A Multi-Dimensional Contract Approach</h3>
+ <p class="authors">M. Wu, D. Ye, J. Ding, Y. Guo, R. Yu, and M. Pan</p>
+ <p class="venue">IEEE Internet of Things Journal (IoT-J), vol. 8, no. 13, pp. 10639–10651, July 2021.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9317806" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/wu2021incentivizing_IoTJ.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Federated learning is a promising tool in the Internet-of-Things (IoT) domain for training a machine learning model in a decentralized manner. Specifically, the data owners (e.g., IoT device consumers) keep their raw data and only share their local computation results to train the global model of the model owner (e.g., an IoT service provider). When executing the federated learning task, the data owners contribute their computation and communication resources. In this situation, the data owners have to face privacy issues where attackers may infer data property or recover the raw data based on the shared information. Considering these disadvantages, the data owners will be reluctant to use their data to participate in federated learning without a well-designed incentive mechanism. In this article, we deliberately design an incentive mechanism jointly considering the task expenditure and privacy issue of federated learning. Based on a differentially private federated learning (DPFL) framework that can prevent the privacy leakage of the data owners, we model the contribution as well as the computation, communication, and privacy costs of each data owner. The three types of costs are data owners’ private information unknown to the model owner, which thus forms an information asymmetry. To maximize the utility of the model owner under such information asymmetry, we leverage a 3-D contract approach to design the incentive mechanism. The simulation results validate the effectiveness of the proposed incentive mechanism with the DPFL framework compared to other baseline mechanisms.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{wu2021incentivizing,
+  author  = {M. Wu and D. Ye and J. Ding and Y. Guo and R. Yu and M. Pan},
+  title   = {{Incentivizing Differentially Private Federated Learning: A Multi-Dimensional Contract Approach}},
+  journal = {IEEE Internet of Things Journal (IoT-J)},
+  volume  = {8},
+  number  = {13},
+  pages   = {10639--10651},
+  month   = jul,
+  year    = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J39" data-cv-id="J39" data-year="2021">
+ <p class="publication-type">Journal article</p>
+ <h3>Aggregation-Based Colocation Datacenter Energy Management in Wholesale Markets</h3>
+ <p class="authors">Y. Guo, M. Pan, and Y. Gong</p>
+ <p class="venue">IEEE Transactions on Cloud Computing (TCC), vol. 9, no. 1, pp. 66–78, January– March 2021.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/8359318" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/guo2021aggregation_TCC.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      In this paper, we study how colocation datacenter energy cost can be effectively reduced in the wholesale electricity market via cooperative power procurement. Intuitively, by aggregating workloads and renewables across a group of tenants in a colocation datacenter, the overall power demand uncertainty of the colocation datacenter can be reduced, resulting in less chance of being penalized when participating in the wholesale electricity market. We use cooperative game theory to model the cooperative electricity procurement process of tenants as a cooperative game, and show the cost saving benefits of aggregation. Then, a cost allocation scheme based on the marginal contribution of each tenant to the total expected cost is proposed to distribute the aggregation benefits among the participating tenants. Besides, we propose proportional cost allocation scheme to distribute the aggregation benefits among the participating tenants after realizations of power demand and market prices. Finally, numerical experiments based on real-world traces are conducted to illustrate the benefits of aggregation compared to noncooperative power procurement.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{guo2021aggregationbased,
+  author  = {Y. Guo and M. Pan and Y. Gong},
+  title   = {{Aggregation-Based Colocation Datacenter Energy Management in Wholesale Markets}},
+  journal = {IEEE Transactions on Cloud Computing (TCC)},
+  volume  = {9},
+  number  = {1},
+  pages   = {66--78},
+  month   = jan,
+  year    = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J38" data-cv-id="J38" data-year="2021">
+ <p class="publication-type">Journal article</p>
+ <h3>Data-Driven Spectrum Trading with Secondary Users’ Differential Privacy Preservation</h3>
+ <p class="authors">J. Wang, X. Zhang, Q. Zhang, M. Li, Y. Guo, Z. Feng, and M. Pan</p>
+ <p class="venue">IEEE Transactions on Dependable and Secure Computing (TDSC), vol. 18, no. 1, pp. 438–447, January–February. 2021.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/8611156" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/wang2021data_TDSC.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Spectrum trading benefits both secondary users (SUs) and primary users (PUs), while it poses great challenges to maximize PUs’ revenue, since SUs’ demands are uncertain and individual SU’s traffic portfolio contains private information. In this paper, we propose a data-driven spectrum trading scheme which maximizes PUs’ revenue and preserves SUs’ demand differential privacy. Briefly, we introduce a novel network architecture consisting of the primary service provider (PSP), the secondary service provider (SSP) and the secondary traffic estimator and database (STED). Under the proposed architecture, PSP aggregates available spectrum from PUs, and sells the spectrum to SSP at fixed wholesale price, directly to SUs at spot price, or both. The PSP has to accurately estimate SUs’ demands. To estimate SUs’ demand, the STED exploits data-driven approach to choose sampled SUs to construct the reference distribution of SUs’ demands, and utilizes reference distribution to estimate the demand distribution of all SUs. Moreover, the STED adds noises to preserve the demand differential privacy of sampled SUs before it answers the demand estimation queries from the PSP. With the estimated SUs’ demand, we formulate the revenue maximization problem into a risk-averse optimization, develop feasible solutions, and verify its effectiveness through both theoretical proof and simulations.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{wang2021datadriven,
+  author  = {J. Wang and X. Zhang and Q. Zhang and M. Li and Y. Guo and Z. Feng and M. Pan},
+  title   = {{Data-Driven Spectrum Trading with Secondary Users&#x27; Differential Privacy Preservation}},
+  journal = {IEEE Transactions on Dependable and Secure Computing (TDSC)},
+  volume  = {18},
+  number  = {1},
+  pages   = {438--447},
+  month   = jan,
+  year    = {2021}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-C30" data-cv-id="C30" data-year="2021">
+ <p class="publication-type">Conference paper</p>
+ <h3>Discounting Lives: Analyzing the Causes of Hispanic Adversity Raging in the Healthcare Sector during COVID-19 using Cumulative Inequality Theory</h3>
+ <p class="authors">P. Bhatt, Y. Guo, and Y. Gong</p>
+ <p class="venue">Hawaii International Conference on System Sciences (HICSS-54), January 4 – 9, 2021.</p>
+ <div class="paper-links"><a href="https://scholar.google.com/scholar?q=%22Discounting%20Lives%3A%20Analyzing%20the%20Causes%20of%20Hispanic%20Adversity%20Raging%20in%20the%20Healthcare%20Sector%20during%20COVID-19%20using%20Cumulative%20Inequality%20Theory%22" target="_blank" rel="noopener">Find paper</a></div>
+ <div class="paper-details"><details><summary>BibTeX</summary><pre>@inproceedings{bhatt2021discounting,
+  author    = {P. Bhatt and Y. Guo and Y. Gong},
+  title     = {{Discounting Lives: Analyzing the Causes of Hispanic Adversity Raging in the Healthcare Sector during COVID-19 using Cumulative Inequality Theory}},
+  booktitle = {Hawaii International Conference on System Sciences (HICSS-54)},
+  month     = jan,
+  year      = {2021}
+}</pre></details></div>
+</article></div></details>

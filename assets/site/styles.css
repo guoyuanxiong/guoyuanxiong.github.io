@@ -1,0 +1,766 @@
+/* Site styles: colors and fonts are defined in :root below. */
+:root {
+  color-scheme:light;
+  --bg:#fff;
+  --panel:#f4f6f9;
+  --ink:#172436;
+  --muted:#536071;
+  --accent:#1755a0;
+  --line:#dce1e7;
+  --strong:#8390a1;
+  --nav:rgba(255,255,255,.97);
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:115px
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:17px/1.7 var(--sans);
+  -webkit-font-smoothing:antialiased
+}
+
+a {
+  color:var(--accent);
+  text-decoration-thickness:1px;
+  text-underline-offset:4px
+}
+
+a:hover {
+  text-decoration:underline
+}
+
+a:focus-visible,button:focus-visible,summary:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:4px
+}
+
+button,input,select {
+  font:inherit
+}
+
+h1,h2,h3,p {
+  margin-top:0
+}
+
+h1,h2 {
+  font-family:var(--serif);
+  font-weight:500;
+  line-height:1.2
+}
+
+h3 {
+  font-size:1rem;
+  line-height:1.45;
+  font-weight:650
+}
+
+p {
+  margin-bottom:1.05rem
+}
+
+.wrap {
+  width:min(1040px,calc(100% - 64px));
+  margin-inline:auto
+}
+
+.skip {
+  position:fixed;
+  left:16px;
+  top:-100px;
+  background:var(--bg);
+  padding:10px;
+  z-index:30
+}
+
+.skip:focus {
+  top:12px
+}
+
+.topbar {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:var(--nav);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px)
+}
+
+.nav-wrap {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  min-height:76px;
+  padding-block:12px
+}
+
+.brand {
+  font-family:var(--serif);
+  font-size:1.15rem;
+  white-space:nowrap;
+  color:var(--ink);
+  text-decoration:none
+}
+
+.brand span {
+  display:none
+}
+
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:7px 17px;
+  margin-left:auto
+}
+
+nav a {
+  font-size:.875rem;
+  text-decoration:none;
+  color:var(--ink)
+}
+
+nav a[aria-current] {
+  color:var(--accent);
+  text-decoration:underline
+}
+
+.theme {
+  border:1px solid var(--line);
+  background:var(--bg);
+  color:var(--ink);
+  border-radius:50%;
+  width:34px;
+  height:34px;
+  flex:none;
+  cursor:pointer
+}
+
+.masthead {
+  display:grid;
+  grid-template-columns:205px 1fr;
+  gap:44px;
+  align-items:center;
+  padding:58px 0 6px
+}
+
+.portrait {
+  display:block;
+  width:205px;
+  height:257px;
+  object-fit:cover;
+  border-radius:3px
+}
+
+.affiliation-line {
+  font-size:.875rem;
+  color:var(--accent);
+  font-weight:650;
+  margin-bottom:12px
+}
+
+h1 {
+  font-size:clamp(2.3rem,4.5vw,3.25rem);
+  margin-bottom:12px;
+  letter-spacing:-.025em
+}
+
+.role {
+  font-weight:650;
+  margin-bottom:2px
+}
+
+.affiliation {
+  font-size:.94rem;
+  color:var(--muted);
+  margin-bottom:16px
+}
+
+.contact-links {
+  display:flex;
+  gap:6px 18px;
+  flex-wrap:wrap;
+  font-size:.875rem
+}
+
+.email {
+  font-size:.875rem;
+  margin:7px 0 0
+}
+
+.email a {
+  color:var(--muted)
+}
+
+.section {
+  padding-top:58px
+}
+
+.section>h2 {
+  font-size:1.9rem;
+  border-bottom:1px solid var(--strong);
+  padding-bottom:12px;
+  margin-bottom:25px
+}
+
+.bio {
+  max-width:98ch
+}
+
+.bio p {
+  line-height:1.8
+}
+
+.interest-list {
+  list-style:none;
+  padding:0;
+  margin:0
+}
+
+.interest-list li {
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:28px;
+  border-bottom:1px solid var(--line);
+  padding:17px 0
+}
+
+.interest-list li:first-child {
+  padding-top:0
+}
+
+.interest-list li:last-child {
+  border:0;
+  padding-bottom:0
+}
+
+.interest-list h3 {
+  margin:0
+}
+
+.interest-list p {
+  margin:0;
+  color:var(--ink);
+  font-size:.94rem
+}
+
+/* The news and publication lists are capped at five visible items by main.js,
+   which measures where the sixth begins; without JavaScript both lists show in
+   full. */
+.news-scroll,.papers-scroll {
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  padding-right:6px
+}
+
+.news-scroll:focus-visible,.papers-scroll:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:4px
+}
+
+.news-list {
+  list-style:none;
+  padding:0;
+  margin:0
+}
+
+.news-list li {
+  display:grid;
+  grid-template-columns:95px 1fr;
+  gap:20px;
+  padding:12px 0;
+  border-bottom:1px solid var(--line)
+}
+
+.news-list li:first-child {
+  padding-top:0
+}
+
+.news-list li:last-child {
+  padding-bottom:0
+}
+
+.news-list time {
+  font-size:.875rem;
+  color:var(--accent);
+  font-variant-numeric:tabular-nums
+}
+
+.news-list p {
+  margin:0;
+  font-size:1rem
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:start
+}
+
+.column-title {
+  font-size:.875rem;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+  color:var(--muted);
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;
+  margin-bottom:17px
+}
+
+.entry-list {
+  list-style:none;
+  padding:0;
+  margin:0
+}
+
+.entry-list li {
+  display:grid;
+  grid-template-columns:85px 1fr;
+  gap:14px;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  font-size:.94rem
+}
+
+.entry-list li:first-child {
+  padding-top:0
+}
+
+.entry-list li:last-child {
+  border-bottom:0
+}
+
+.entry-date {
+  font-size:.875rem;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums
+}
+
+.entry-list strong {
+  font-weight:600
+}
+
+.section-intro {
+  font-size:.94rem;
+  margin-bottom:24px
+}
+
+summary {
+  cursor:pointer
+}
+
+details[open]>summary {
+  margin-bottom:12px
+}
+
+.pub-year {
+  border-top:1px solid var(--line);
+  padding:17px 0
+}
+
+.pub-year:last-child {
+  border-bottom:1px solid var(--line)
+}
+
+.pub-year>summary {
+  font-family:var(--serif);
+  font-size:1.4rem;
+  line-height:1.3;
+  color:var(--ink)
+}
+
+.pub-year>summary span {
+  font: .875rem var(--sans);
+  color:var(--muted);
+  margin-left:18px
+}
+
+.year-papers {
+  padding:0 0 0 26px
+}
+
+.paper {
+  padding:14px 0;
+  border-bottom:1px solid var(--line)
+}
+
+/* Three lines per entry: title, authors, venue. A title linking to the paper
+   keeps the body colour and carries a faint underline as the only cue. */
+.paper h3 {
+  margin-bottom:4px
+}
+
+.paper h3 a {
+  color:inherit;
+  text-decoration:underline;
+  text-decoration-color:var(--line);
+  text-underline-offset:3px
+}
+
+.paper h3 a:hover {
+  color:var(--accent);
+  text-decoration-color:currentColor
+}
+
+.paper:last-child {
+  border-bottom:0;
+  padding-bottom:8px
+}
+
+.venue {
+  font-size:.875rem;
+  color:var(--muted);
+  font-style:italic;
+  margin-bottom:0
+}
+
+.paper h3 {
+  font-size:1.04rem;
+  line-height:1.5;
+  margin-bottom:7px
+}
+
+.authors {
+  font-size:.875rem;
+  color:var(--ink);
+  margin-bottom:10px
+}
+
+.paper-links {
+  display:flex;
+  gap:16px;
+  font-size:.82rem;
+  margin:0
+}
+
+.paper-details {
+  margin-top:10px;
+  font-size:.875rem
+}
+
+.paper-details details {
+  margin:7px 0
+}
+
+.paper-details summary {
+  width:fit-content;
+  color:var(--muted)
+}
+
+.paper-details p {
+  font-size:.94rem;
+  margin:12px 0
+}
+
+.paper-details pre {
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  background:var(--panel);
+  padding:18px;
+  font-size:.8rem
+}
+
+.teaching-grid {
+  display:block
+}
+
+.teaching-grid>div {
+  margin-bottom:30px
+}
+
+.teaching-grid>div:last-child {
+  margin-bottom:0
+}
+
+.teaching-grid .column-title {
+  margin-bottom:14px;
+  color:var(--ink);
+  text-transform:none;
+  letter-spacing:0;
+  font-size:1rem;
+  font-weight:650
+}
+
+/* Course codes are short, so they run in two balanced columns under each
+   institution; the institution heading stays full width. */
+.courses.two-columns {
+  columns:2;
+  column-gap:44px
+}
+
+.courses.two-columns li {
+  break-inside:avoid;
+  -webkit-column-break-inside:avoid
+}
+
+/* Awards fill row by row, so reading left to right keeps them in date order.
+   The year sits above the award, which keeps long date ranges on one line. */
+.award-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 48px;
+  list-style:none;
+  padding:0;
+  margin:0
+}
+
+.award-grid li {
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  font-size:.94rem
+}
+
+.award-grid .entry-date {
+  display:block;
+  margin-bottom:3px
+}
+
+.teaching-grid h3 {
+  font-size:.95rem;
+  margin-bottom:12px
+}
+
+.courses {
+  padding-left:20px;
+  margin:0;
+  color:var(--ink);
+  font-size:.94rem
+}
+
+.courses li {
+  padding:4px 0
+}
+
+.service-grid {
+  row-gap:25px
+}
+
+.service-grid h3 {
+  font-size:.875rem;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:650;
+  border-bottom:1px solid var(--line);
+  padding-bottom:10px;
+  margin-bottom:14px
+}
+
+.service-grid ul {
+  padding-left:20px;
+  margin:0;
+  font-size:.94rem;
+  color:var(--ink)
+}
+
+.service-grid li {
+  padding:5px 0
+}
+
+.service-grid details {
+  font-size:.94rem
+}
+
+.footer {
+  border-top:1px solid var(--line);
+  margin-top:60px;
+  padding-block:28px;
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:.875rem;
+  color:var(--muted)
+}
+
+.footer a {
+  color:var(--muted)
+}
+
+[data-theme="dark"] {
+  color-scheme:dark;
+  --bg:#111d2b;
+  --panel:#1b2c40;
+  --ink:#eef3fa;
+  --muted:#b4c0d1;
+  --accent:#94c4ff;
+  --line:#334357;
+  --strong:#7c8da2;
+  --nav:rgba(17,29,43,.97)
+}
+
+@media(max-width:1000px) {
+  .nav-wrap {
+    gap:14px;
+    flex-wrap:wrap
+  }
+  nav {
+    order:3;
+    width:100%;
+    justify-content:flex-start;
+    gap:6px 21px
+  }
+  .theme {
+    margin-left:auto
+  }
+  html {
+    scroll-padding-top:150px
+  }
+  .masthead {
+    padding-top:40px
+  }
+  .interest-list li {
+    grid-template-columns:225px 1fr;
+    gap:20px
+  }
+}
+
+@media(max-width:680px) {
+  .wrap {
+    width:calc(100% - 36px)
+  }
+  .nav-wrap {
+    padding-block:10px
+  }
+  nav {
+    gap:6px 15px
+  }
+  nav a {
+    font-size:.875rem
+  }
+  .masthead {
+    grid-template-columns:110px 1fr;
+    gap:22px;
+    padding-top:32px
+  }
+  .portrait {
+    width:110px;
+    height:138px
+  }
+  .affiliation-line {
+    font-size:.875rem;
+    margin-bottom:10px
+  }
+  h1 {
+    font-size:2.15rem
+  }
+  .role,.affiliation {
+    font-size:.875rem
+  }
+  .contact-links {
+    gap:7px 14px
+  }
+  .section {
+    padding-top:40px
+  }
+  .section>h2 {
+    font-size:1.65rem;
+    margin-bottom:22px
+  }
+  .two-col {
+    grid-template-columns:1fr;
+    gap:28px
+  }
+  .courses.two-columns {
+    columns:1
+  }
+  .award-grid {
+    grid-template-columns:1fr;
+    gap:0
+  }
+  .interest-list li {
+    grid-template-columns:1fr;
+    gap:6px;
+    padding-block:15px
+  }
+  .news-list li {
+    grid-template-columns:75px 1fr;
+    gap:12px
+  }
+  .entry-list li {
+    grid-template-columns:80px 1fr;
+    gap:12px
+  }
+  .year-papers {
+    padding-left:0
+  }
+  .footer {
+    margin-top:40px
+  }
+  .email {
+    overflow-wrap:anywhere
+  }
+}
+
+@media(max-width:400px) {
+  .masthead {
+    grid-template-columns:1fr
+  }
+  .portrait {
+    width:110px;
+    height:138px
+  }
+  .news-list li {
+    grid-template-columns:1fr;
+    gap:3px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+}
+
+@media print {
+  .topbar,.skip {
+    display:none
+  }
+  .wrap {
+    width:100%
+  }
+  .masthead {
+    padding-top:0
+  }
+  body {
+    font-size:11pt
+  }
+  .section {
+    padding-top:24px
+  }
+  .footer {
+    margin-top:24px
+  }
+}
+
+
+/* CV update: publication types, student rosters, and longer appointment dates. */
+.publication-type { font-size: .875rem; color: var(--accent); margin-bottom: 6px; }
+.supplementary { margin-top: 28px; }
+.supplementary > summary { font-weight: 600; }
+.supplementary > summary span { color: var(--muted); font-weight: 400; margin-left: 12px; }
+.presentation-year { font-family: var(--serif); font-size: 1.4rem; margin: 28px 0 6px; }
+.student-list { padding: 0; margin: 0; list-style: none; }
+.student-list li { padding: 15px 0; border-bottom: 1px solid var(--line); }
+.student-list li:first-child { padding-top: 0; }
+.student-list h3 { margin-bottom: 5px; }
+.student-list p, .student-context { font-size: .94rem; color: var(--ink); margin-bottom: 4px; }
+.student-context { margin-bottom: 20px; }
+.student-history { margin-top: 38px; }
+.entry-note { color: var(--muted); font-size: .875rem; }
+#journey .entry-list li { grid-template-columns: 108px 1fr; }
+.entry-date { overflow-wrap: anywhere; }
+.course-history { margin-top: 12px; font-size: .875rem; }
+@media (max-width: 680px) { #journey .entry-list li { grid-template-columns: 90px 1fr; } }

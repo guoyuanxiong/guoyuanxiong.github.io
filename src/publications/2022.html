@@ -1,0 +1,160 @@
+<details class="pub-year"><summary>2022<span>8 publications</span></summary><div class="year-papers"><article class="paper" id="publication-C25" data-cv-id="C25" data-year="2022">
+ <p class="publication-type">Conference paper</p>
+ <h3>Agent-Level Differentially Private Federated Learning via Compressed Model Perturbation</h3>
+ <p class="authors">Y. Guo, R. Hu, and Y. Gong</p>
+ <p class="venue">IEEE Conference on Communications and Network Security (CNS), Austin, TX, October 3 – 5, 2022.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/abstract/document/9947266" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/guo2022agent_CNS.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Federated learning (FL) involves a network of distributed agents that collaboratively learn a common model without sharing their raw data. Privacy and communication are two critical concerns of federated learning, but they are often treated separately in the literature. While random noise can be added during the federated learning process to defend against privacy inference attacks, its magnitude is linearly proportional to the model size, which can be very large for modern deep neural networks and lead to severe degradation in model accuracy. On the other hand, various compression techniques have been proposed to improve the communication efficiency of federated learning, but their interplay with privacy protection is largely ignored. Motivated by the observation that privacy protection and communication reduction are closely related in the context of FL, we propose a new federated learning scheme called CMP-Fed that achieves agent-level differential privacy with high model accuracy by leveraging the communication compression techniques in FL with large model sizes. The key component of CMP-Fed is compressed model perturbation (CMP), which first compresses the shared model updates before perturbing them with random noise at each communication round of federated learning. Experimental results based on Fashion-MNIST dataset show that CMP-Fed can largely outperform the existing differentially private federated learning schemes in terms of model accuracy under the same privacy guarantee while still enjoying the communication benefit of model compression.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@inproceedings{guo2022agentlevel,
+  author    = {Y. Guo and R. Hu and Y. Gong},
+  title     = {{Agent-Level Differentially Private Federated Learning via Compressed Model Perturbation}},
+  booktitle = {IEEE Conference on Communications and Network Security (CNS)},
+  address   = {Austin, TX},
+  month     = oct,
+  year      = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J25" data-cv-id="J25" data-year="2022">
+ <p class="publication-type">Journal article</p>
+ <h3>Constructing Mobile Crowdsourced COVID-19 Vulnerability Map with Geo-Indistinguishability</h3>
+ <p class="authors">R. Chen, L. Li, Y. Ma, Y. Gong, Y. Guo, T. Ohtsuki, and M. Pan</p>
+ <p class="venue">IEEE Internet of Things Journal (IoT-J), vol. 9, no. 18, pp. 17403 – 17416, September 2022.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9733817" target="_blank" rel="noopener">Paper</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Preventing COVID-19 disease from spreading in communities will require proactive and effective healthcare resources allocations, such as vaccinations. A fine-grained COVID-19 vulnerability map will be essential to detect the high-risk communities and guild the effective vaccine policy. A mobile-crowdsourcing-based self-reporting approach is a promising solution. However, an accurate mobile-crowdsourcing-based map construction requests participants to report their actual locations, raising serious privacy concerns. To address this issue, we propose a novel approach to effectively construct a reliable community-level COVID-19 vulnerability map based on mobile crowdsourced COVID-19 self-reports without compromising participants’ location privacy. We design a geo-perturbation scheme where participants can locally obfuscate their locations with the geo-indistinguishability guarantee to protect their location privacy against any adversaries’ prior knowledge. To minimize the data utility loss caused by location perturbation, we first design an unbiased vulnerability estimator and formulate the location perturbation probability generation into a convex optimization. Its objective is to minimize the estimation error of the direct vulnerability estimator under the constraints of geo-indistinguishability. Given the perturbed locations, we integrate the perturbation probabilities with the spatial smoothing method to obtain reliable community-level vulnerability estimations that are robust to a small-sampling-size problem incurred by location perturbation. Considering the fast-spreading nature of coronavirus, we integrate the vulnerability estimates into the modified susceptible-infected-removed (SIR) model with vaccination for building a future trend map. It helps to provide a guideline for vaccine allocation when supply is limited. Extensive simulations based on real-world data demonstrate the proposed scheme superiority over the peer designs satisfying geo-indistinguishability in terms of estimation accuracy and reliability.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{chen2022constructing,
+  author  = {R. Chen and L. Li and Y. Ma and Y. Gong and Y. Guo and T. Ohtsuki and M. Pan},
+  title   = {{Constructing Mobile Crowdsourced COVID-19 Vulnerability Map with Geo-Indistinguishability}},
+  journal = {IEEE Internet of Things Journal (IoT-J)},
+  volume  = {9},
+  number  = {18},
+  pages   = {17403--17416},
+  month   = sep,
+  year    = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J26" data-cv-id="J26" data-year="2022">
+ <p class="publication-type">Journal article</p>
+ <h3>IoT Device Friendly and Communication Efficient Federated Learning via Joint Model Pruning and Quantization</h3>
+ <p class="authors">P. Prakash, J. Ding, R. Chen, M. Shu, Q. Cui, Y. Guo, and M. Pan</p>
+ <p class="venue">IEEE Internet of Things Journal (IoT-J), vol. 9, no. 15, pp. 13638 – 13650, August 2022.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9691274" target="_blank" rel="noopener">Paper</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Federated learning (FL) through its novel applications and services has enhanced its presence as a promising tool in the Internet of Things (IoT) domain. Specifically, in a multiaccess edge computing setup with a host of IoT devices, FL is most suitable since it leverages distributed client data to train high-performance deep learning (DL) models while keeping the data private. However, the underlying deep neural networks (DNNs) are huge, preventing its direct deployment onto resource-constrained computing and memory-limited IoT devices. Besides, frequent exchange of model updates between the central server and clients in FL could result in a communication bottleneck. To address these challenges, in this article, we introduce GWEP, a model compression-based FL method. It utilizes joint quantization and model pruning to reap the benefits of DNNs while meeting the capabilities of resource-constrained devices. Consequently, by reducing the computational, memory, and network footprint of FL, the low-end IoT devices may be able to participate in the FL process. In addition, we provide theoretical guarantees of FL convergence. Through empirical evaluations, we demonstrate that our approach significantly outperforms the baseline algorithms by being up to 10.23 times faster with 11 times lesser communication rounds, while achieving high-model compression, energy efficiency, and learning performance.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{prakash2022iot,
+  author  = {P. Prakash and J. Ding and R. Chen and M. Shu and Q. Cui and Y. Guo and M. Pan},
+  title   = {{IoT Device Friendly and Communication Efficient Federated Learning via Joint Model Pruning and Quantization}},
+  journal = {IEEE Internet of Things Journal (IoT-J)},
+  volume  = {9},
+  number  = {15},
+  pages   = {13638--13650},
+  month   = aug,
+  year    = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J32" data-cv-id="J32" data-year="2022">
+ <p class="publication-type">Journal article</p>
+ <h3>Private Empirical Risk Minimization with Analytic Gaussian Mechanism for Healthcare System</h3>
+ <p class="authors">J. Ding, S. M. Errapotu, Y. Guo, H. Zhang, D. Yuan and M. Pan</p>
+ <p class="venue">IEEE Transactions on Big Data (TBD), vol. 8, no. 4, pp. 1107–1117, August 2022.</p>
+ <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/9099904" target="_blank" rel="noopener">Paper</a><a href="https://guoyuanxiong.github.io/assets/pdf/ding2020private_TBD.pdf">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      With the wide range application of machine learning in healthcare for helping humans drive crucial decisions, data privacy becomes an inevitable concern due to the utilization of sensitive data such as patients records and registers of a company. Thus, constructing a privacy preserving machine learning model while still maintaining high accuracy becomes a challenging problem. In this paper, we propose two differentially private algorithms, i.e., Output Perturbation with aGM (OPERA) and Gradient Perturbation with aGM (GRPUA) for empirical risk minimization, a useful method to obtain a globally optimal classifier, by leveraging the analytic Gaussian mechanism (aGM) to achieve privacy preservation of sensitive medical data in a healthcare system. We theoretically analyze and prove utility upper bounds of proposed algorithms and compare them with prior algorithms in the literature. The analyses show that in the high privacy regime, our proposed algorithms can achieve a tighter utility bound for both settings: strongly convex and non-strongly convex loss functions. Besides, we evaluate the proposed private algorithms on three benchmark datasets, i.e., Adult, BANK and IPUMS-BR. The simulation results demonstrate that our approaches can achieve higher accuracy and lower objective values compared with existing ones in all three datasets while providing differential privacy guarantees.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@article{ding2022private,
+  author  = {J. Ding and S. M. Errapotu and Y. Guo and H. Zhang and D. Yuan and M. Pan},
+  title   = {{Private Empirical Risk Minimization with Analytic Gaussian Mechanism for Healthcare System}},
+  journal = {IEEE Transactions on Big Data (TBD)},
+  volume  = {8},
+  number  = {4},
+  pages   = {1107--1117},
+  month   = aug,
+  year    = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-J24" data-cv-id="J24" data-year="2022">
+ <p class="publication-type">Journal article</p>
+ <h3>Emerging Artificial Intelligence-Empowered Mobile Health: Scoping Review</h3>
+ <p class="authors">P. Bhatt, J. Liu, Y. Gong, J. Wang, and Y. Guo</p>
+ <p class="venue">JMIR mHealth and uHealth (JMU), vol. 10, no. 6, pp. 1 – 14, June 2022.</p>
+ <div class="paper-links"><a href="https://scholar.google.com/scholar?q=%22Emerging%20Artificial%20Intelligence-Empowered%20Mobile%20Health%3A%20Scoping%20Review%22" target="_blank" rel="noopener">Find paper</a></div>
+ <div class="paper-details"><details><summary>BibTeX</summary><pre>@article{bhatt2022emerging,
+  author  = {P. Bhatt and J. Liu and Y. Gong and J. Wang and Y. Guo},
+  title   = {{Emerging Artificial Intelligence-Empowered Mobile Health: Scoping Review}},
+  journal = {JMIR mHealth and uHealth (JMU)},
+  volume  = {10},
+  number  = {6},
+  pages   = {1--14},
+  month   = jun,
+  year    = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-C27" data-cv-id="C27" data-year="2022">
+ <p class="publication-type">Conference paper</p>
+ <h3>Energy-Efficient Distributed Machine Learning at Wireless Edge with Device-to-Device Communication</h3>
+ <p class="authors">R. Hu, Y. Guo, and Y. Gong</p>
+ <p class="venue">IEEE International Conference on Communications (ICC), May 16 – 22, 2022.</p>
+ <div class="paper-links"><a href="https://scholar.google.com/scholar?q=%22Energy-Efficient%20Distributed%20Machine%20Learning%20at%20Wireless%20Edge%20with%20Device-to-Device%20Communication%22" target="_blank" rel="noopener">Find paper</a></div>
+ <div class="paper-details"><details><summary>BibTeX</summary><pre>@inproceedings{hu2022energyefficient,
+  author    = {R. Hu and Y. Guo and Y. Gong},
+  title     = {{Energy-Efficient Distributed Machine Learning at Wireless Edge with Device-to-Device Communication}},
+  booktitle = {IEEE International Conference on Communications (ICC)},
+  month     = may,
+  year      = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-C26" data-cv-id="C26" data-year="2022">
+ <p class="publication-type">Conference paper</p>
+ <h3>Hybrid Local SGD for Federated Learning with Heterogeneous Communications</h3>
+ <p class="authors">Y. Guo, Y. Sun, R. Hu, and Y. Gong</p>
+ <p class="venue">International Conference on Learning Representations (ICLR), April 25 – 29, 2022. (Spotlight, acceptance rate = 176/3391 = 5%)</p>
+ <div class="paper-links"><a href="https://openreview.net/forum?id=H0oaWl6THa" target="_blank" rel="noopener">Paper</a><a href="https://openreview.net/pdf?id=H0oaWl6THa" target="_blank" rel="noopener">PDF</a></div>
+ <div class="paper-details"><details>
+<summary>
+      Abstract
+     </summary>
+<p>
+      Communication is a key bottleneck in federated learning where a large number of edge devices collaboratively learn a model under the orchestration of a central server without sharing their own training data. While local SGD has been proposed to reduce the number of FL rounds and become the algorithm of choice for FL, its total communication cost is still prohibitive when each device needs to communicate with the remote server repeatedly for many times over bandwidth-limited networks. In light of both device-to-device (D2D) and device-to-server (D2S) cooperation opportunities in modern communication networks, this paper proposes a new federated optimization algorithm dubbed hybrid local SGD (HL-SGD) in FL settings where devices are grouped into a set of disjoint clusters with high D2D communication bandwidth. HL-SGD subsumes previous proposed algorithms such as local SGD and gossip SGD and enables us to strike the best balance between model accuracy and runtime. We analyze the convergence of HL-SGD in the presence of heterogeneous data for general nonconvex settings. We also perform extensive experiments and show that the use of hybrid model aggregation via D2D and D2S communications in HL-SGD can largely speed up the training time of federated learning.
+     </p>
+</details><details><summary>BibTeX</summary><pre>@inproceedings{guo2022hybrid,
+  author    = {Y. Guo and Y. Sun and R. Hu and Y. Gong},
+  title     = {{Hybrid Local SGD for Federated Learning with Heterogeneous Communications}},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  month     = apr,
+  year      = {2022}
+}</pre></details></div>
+</article>
+<article class="paper" id="publication-C28" data-cv-id="C28" data-year="2022">
+ <p class="publication-type">Conference paper</p>
+ <h3>Towards a Model for Inclusive Healthcare Access post COVID-19</h3>
+ <p class="authors">P. Bhatt, O, Akanfe, Y. Guo, and Y. Gong</p>
+ <p class="venue">Hawaii International Conference on System Sciences (HICSS-55), January 4 – 7, 2022.</p>
+ <div class="paper-links"><a href="https://scholar.google.com/scholar?q=%22Towards%20a%20Model%20for%20Inclusive%20Healthcare%20Access%20post%20COVID-19%22" target="_blank" rel="noopener">Find paper</a></div>
+ <div class="paper-details"><details><summary>BibTeX</summary><pre>@inproceedings{bhatt2022model,
+  author    = {P. Bhatt and O and Akanfe and Y. Guo and Y. Gong},
+  title     = {{Towards a Model for Inclusive Healthcare Access post COVID-19}},
+  booktitle = {Hawaii International Conference on System Sciences (HICSS-55)},
+  month     = jan,
+  year      = {2022}
+}</pre></details></div>
+</article></div></details>
