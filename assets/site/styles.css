@@ -40,6 +40,17 @@ a:hover {
   text-decoration:underline
 }
 
+/* iOS/macOS data detectors: keep auto-detected dates and addresses
+   looking like the surrounding text, not like links. */
+a[x-apple-data-detectors] {
+  color:inherit !important;
+  text-decoration:none !important;
+  font-family:inherit !important;
+  font-size:inherit !important;
+  font-weight:inherit !important;
+  line-height:inherit !important
+}
+
 a:focus-visible,button:focus-visible,summary:focus-visible {
   outline:3px solid var(--accent);
   outline-offset:4px
