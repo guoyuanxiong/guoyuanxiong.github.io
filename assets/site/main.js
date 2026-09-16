@@ -93,6 +93,25 @@
 
   capScrollRegions();
 
+  // Some browsers (notably Safari and Mac trackpads) keep a scroll gesture
+  // locked inside a list even after it reaches its end. When a list can't
+  // scroll any further in the wheel's direction, scroll the page instead.
+  const LINE_HEIGHT = 16;
+  for (const [container] of scrollRegions) {
+    const region = document.querySelector(container);
+    if (!region) continue;
+    region.addEventListener('wheel', (event) => {
+      if (event.ctrlKey || event.deltaY === 0) return; // pinch-zoom or sideways
+      const atTop = region.scrollTop <= 0;
+      const atBottom = region.scrollTop + region.clientHeight >= region.scrollHeight - 1;
+      if ((event.deltaY < 0 && atTop) || (event.deltaY > 0 && atBottom)) {
+        event.preventDefault();
+        const scale = event.deltaMode === 1 ? LINE_HEIGHT : event.deltaMode === 2 ? innerHeight : 1;
+        scrollBy({ top: event.deltaY * scale, behavior: 'instant' });
+      }
+    }, { passive: false });
+  }
+
   let capTimer;
   addEventListener('resize', () => {
     clearTimeout(capTimer);
