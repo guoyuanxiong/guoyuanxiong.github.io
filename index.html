@@ -20,11 +20,62 @@
   <meta content="Yuanxiong Guo, Associate Professor at UTSA. Research in machine learning, trustworthy AI, and quantum computing and networking, with applications in healthcare, energy, and robotics." name="description"/>
   <meta content="Yuanxiong Guo" name="author"/>
   <link href="https://guoyuanxiong.github.io/" rel="canonical"/>
-  <meta content="Yuanxiong Guo | Research &amp; Teaching" property="og:title"/>
-  <meta content="Machine learning, trustworthy AI, and quantum computing and networking at UTSA." property="og:description"/>
+  <meta content="Yuanxiong (Richard) Guo | Machine Learning &amp; Trustworthy AI" property="og:title"/>
+  <meta content="Yuanxiong Guo" property="og:site_name"/>
+  <meta content="Yuanxiong Guo, Associate Professor at UTSA. Research in machine learning, trustworthy AI, and quantum computing and networking, with applications in healthcare, energy, and robotics." property="og:description"/>
   <meta content="website" property="og:type"/>
   <meta content="https://guoyuanxiong.github.io/" property="og:url"/>
+  <script>
+   // Apply the saved or system theme before first paint; main.js wires up the toggle.
+   (function () {
+     var theme;
+     try { theme = localStorage.getItem('guo-theme'); } catch (e) {}
+     if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+     document.documentElement.dataset.theme = theme;
+   })();
+  </script>
   <link href="assets/site/styles.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuanxiong Guo",
+    "alternateName": "Richard Guo",
+    "url": "https://guoyuanxiong.github.io/",
+    "image": "https://guoyuanxiong.github.io/assets/site/portrait.webp",
+    "email": "mailto:yuanxiong.guo@utsa.edu",
+    "jobTitle": "Associate Professor",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Texas at San Antonio",
+      "url": "https://www.utsa.edu/",
+      "department": {
+        "@type": "Organization",
+        "name": "Department of Information Systems and Cybersecurity"
+      }
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Florida"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Huazhong University of Science and Technology"
+      }
+    ],
+    "knowsAbout": [
+      "Machine learning",
+      "Trustworthy AI",
+      "Quantum computing",
+      "Quantum networking"
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=FK_8hMkAAAAJ",
+      "https://www.linkedin.com/in/yuanxiong-guo-7666749b"
+    ]
+  }
+  </script>
  </head>
  <body>
   <a class="skip" href="#main">
@@ -176,7 +227,7 @@
  <div aria-label="Recent news" class="news-scroll" role="region" tabindex="0">
   <ol class="news-list">
   <li>
-   <time>
+   <time datetime="2026-08">
     08/2026
    </time>
    <p>
@@ -184,7 +235,7 @@
    </p>
   </li>
   <li>
-   <time>
+   <time datetime="2026-06">
     06/2026
    </time>
    <p>
@@ -192,7 +243,7 @@
    </p>
   </li>
   <li>
-   <time>
+   <time datetime="2026-05">
     05/2026
    </time>
    <p>
@@ -200,7 +251,7 @@
    </p>
   </li>
   <li>
-   <time>
+   <time datetime="2026-02">
     02/2026
    </time>
    <p>
@@ -208,7 +259,7 @@
    </p>
   </li>
   <li>
-   <time>
+   <time datetime="2025-10">
     10/2025
    </time>
    <p>
