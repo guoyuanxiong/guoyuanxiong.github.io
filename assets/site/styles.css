@@ -270,7 +270,8 @@ h1 {
    full. */
 .news-scroll,.papers-scroll {
   overflow-y:auto;
-  overscroll-behavior:contain;
+  /* auto: at either end of a list, the wheel or swipe moves on to the page */
+  overscroll-behavior:auto;
   scrollbar-gutter:stable;
   padding-right:6px
 }
