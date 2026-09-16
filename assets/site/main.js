@@ -45,6 +45,25 @@
     document.querySelectorAll('main section[id]').forEach((section) => observer.observe(section));
   }
 
+  // Phone menu: the Menu button shows or hides the section list; choosing a
+  // section or pressing Escape closes it again.
+  const topbar = document.querySelector('.topbar');
+  const menuButton = document.querySelector('.menu-btn');
+  if (topbar && menuButton) {
+    const setMenu = (open) => {
+      topbar.classList.toggle('open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+    };
+    menuButton.addEventListener('click', () => setMenu(!topbar.classList.contains('open')));
+    navigationLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+    addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && topbar.classList.contains('open')) {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
+  }
+
   // Show the five most recent entries in a list and leave the rest behind a
   // scroll. The sixth entry's position sets the height, so the cap adapts to
   // wrapping and to the viewport; a sliver of it stays visible as the cue that

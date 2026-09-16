@@ -778,3 +778,44 @@ details[open]>summary {
 .entry-date { overflow-wrap: anywhere; }
 .course-history { margin-top: 12px; font-size: .875rem; }
 @media (max-width: 680px) { #journey .entry-list li { grid-template-columns: 90px 1fr; } }
+
+/* Phone navigation: a Menu button opens the section list (needs main.js). */
+.menu-btn {
+  display:none
+}
+
+@media(max-width:680px) {
+  html {
+    scroll-padding-top:80px
+  }
+  .js .menu-btn {
+    display:inline-flex;
+    align-items:center;
+    margin-left:auto;
+    border:1px solid var(--line);
+    background:var(--bg);
+    color:var(--ink);
+    border-radius:17px;
+    height:34px;
+    padding:0 12px;
+    font:inherit;
+    font-size:.875rem;
+    cursor:pointer
+  }
+  .js .menu-btn + nav + .theme {
+    margin-left:0
+  }
+  .js nav {
+    display:none
+  }
+  .js .topbar.open nav {
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    width:100%
+  }
+  .js .topbar.open nav a {
+    padding:11px 0;
+    border-top:1px solid var(--line)
+  }
+}

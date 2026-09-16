@@ -31,6 +31,7 @@
      try { theme = localStorage.getItem('guo-theme'); } catch (e) {}
      if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
      document.documentElement.dataset.theme = theme;
+     document.documentElement.classList.add('js');
    })();
   </script>
   <link href="assets/site/styles.css" rel="stylesheet"/>
