@@ -11,11 +11,11 @@ A modular, single-page website for GitHub Pages. The source is plain HTML, CSS, 
 | Research interests | `src/sections/research.html` |
 | Recent news | `src/sections/news.html` |
 | Education and appointments | `src/sections/education-experience.html` |
-| Publication introduction and year order | `src/sections/publications.html` |
+| Publications heading and Google Scholar note | `src/sections/publications.html` |
 | The five papers shown on the page | `src/publications/recent.html` |
 | Full year-by-year archive (kept, not published) | `src/publications/2022.html` and the other year files |
 | Current students, graduates, earlier advising, mentoring | `src/sections/students.html` |
-| Tutorials, posters, and extended abstracts | `src/sections/presentations.html` |
+| Tutorials, posters, and extended abstracts (kept, not published) | `src/sections/presentations.html` |
 | Courses taught | `src/sections/teaching.html` |
 | Awards and honors | `src/sections/awards.html` |
 | Editorial roles, memberships, reviewing | `src/sections/service.html` |

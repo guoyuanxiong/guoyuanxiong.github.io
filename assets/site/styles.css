@@ -769,6 +769,9 @@ details[open]>summary {
 .student-list h3 { margin-bottom: 5px; }
 .student-list p, .student-context { font-size: .94rem; color: var(--ink); margin-bottom: 4px; }
 .student-context { margin-bottom: 20px; }
+.students-grid .student-context { margin-bottom: 4px; }
+.students-grid .student-list li:first-child { padding-top: 15px; }
+.student-list + .student-context { margin-top: 29px; }
 .student-history { margin-top: 38px; }
 .entry-note { color: var(--muted); font-size: .875rem; }
 #journey .entry-list li { grid-template-columns: 108px 1fr; }
