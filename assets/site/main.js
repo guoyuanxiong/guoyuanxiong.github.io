@@ -64,16 +64,15 @@
     });
   }
 
-  // Show the five most recent entries in a list and leave the rest behind a
+  // Show the five most recent News entries and leave the rest behind a
   // scroll. The sixth entry's position sets the height, so the cap adapts to
   // wrapping and to the viewport; a sliver of it stays visible as the cue that
-  // more follows. With this script absent, no cap applies and both lists show
+  // more follows. With this script absent, no cap applies and the list shows
   // in full.
   const VISIBLE_ENTRIES = 5;
   const MAX_PEEK = 40;
   const scrollRegions = [
     ['.news-scroll', '.news-list > li'],
-    ['.papers-scroll', '.recent-papers > .paper'],
   ];
 
   function capScrollRegions() {
