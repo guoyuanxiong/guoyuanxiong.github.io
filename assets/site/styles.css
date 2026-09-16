@@ -265,20 +265,10 @@ h1 {
   font-size:.94rem
 }
 
-/* The news and publication lists are capped at five visible items by main.js,
-   which measures where the sixth begins; without JavaScript both lists show in
-   full. */
-.news-scroll,.papers-scroll {
-  overflow-y:auto;
-  /* auto: at either end of a list, the wheel or swipe moves on to the page */
-  overscroll-behavior:auto;
-  scrollbar-gutter:stable;
-  padding-right:6px
-}
-
-.news-scroll:focus-visible,.papers-scroll:focus-visible {
-  outline:3px solid var(--accent);
-  outline-offset:4px
+/* News shows five entries; build_site.py puts older ones in a "View earlier
+   news" <details> toggle. */
+.news-more {
+  margin-top:16px
 }
 
 .news-list {

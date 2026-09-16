@@ -64,58 +64,5 @@
     });
   }
 
-  // Show the five most recent News entries and leave the rest behind a
-  // scroll. The sixth entry's position sets the height, so the cap adapts to
-  // wrapping and to the viewport; a sliver of it stays visible as the cue that
-  // more follows. With this script absent, no cap applies and the list shows
-  // in full.
-  const VISIBLE_ENTRIES = 5;
-  const MAX_PEEK = 40;
-  const scrollRegions = [
-    ['.news-scroll', '.news-list > li'],
-  ];
-
-  function capScrollRegions() {
-    for (const [container, entries] of scrollRegions) {
-      const region = document.querySelector(container);
-      if (!region) continue;
-      region.style.maxHeight = '';
-      const items = region.querySelectorAll(entries);
-      if (items.length <= VISIBLE_ENTRIES) continue;
-      const top = region.getBoundingClientRect().top;
-      const next = items[VISIBLE_ENTRIES].getBoundingClientRect();
-      // Never reveal the sixth entry in full, or it stops reading as a cue.
-      const peek = Math.min(MAX_PEEK, next.height / 2);
-      region.style.maxHeight = Math.round(next.top - top + peek) + 'px';
-    }
-  }
-
-  capScrollRegions();
-
-  // Some browsers (notably Safari and Mac trackpads) keep a scroll gesture
-  // locked inside a list even after it reaches its end. When a list can't
-  // scroll any further in the wheel's direction, scroll the page instead.
-  const LINE_HEIGHT = 16;
-  for (const [container] of scrollRegions) {
-    const region = document.querySelector(container);
-    if (!region) continue;
-    region.addEventListener('wheel', (event) => {
-      if (event.ctrlKey || event.deltaY === 0) return; // pinch-zoom or sideways
-      const atTop = region.scrollTop <= 0;
-      const atBottom = region.scrollTop + region.clientHeight >= region.scrollHeight - 1;
-      if ((event.deltaY < 0 && atTop) || (event.deltaY > 0 && atBottom)) {
-        event.preventDefault();
-        const scale = event.deltaMode === 1 ? LINE_HEIGHT : event.deltaMode === 2 ? innerHeight : 1;
-        scrollBy({ top: event.deltaY * scale, behavior: 'instant' });
-      }
-    }, { passive: false });
-  }
-
-  let capTimer;
-  addEventListener('resize', () => {
-    clearTimeout(capTimer);
-    capTimer = setTimeout(capScrollRegions, 150);
-  });
-
   document.querySelector('.footer [data-year]').textContent = new Date().getFullYear();
 })();
