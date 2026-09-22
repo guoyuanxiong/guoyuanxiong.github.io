@@ -197,6 +197,18 @@ h1 {
   margin-bottom:16px
 }
 
+/* Contact links and the footer email pair a small icon with their label. */
+.contact-links a,.footer a[href^="mailto:"] {
+  display:inline-flex;
+  align-items:center;
+  gap:7px
+}
+
+.icon {
+  flex:none;
+  opacity:.75
+}
+
 .contact-links {
   display:flex;
   gap:6px 18px;
