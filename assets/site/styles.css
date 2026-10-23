@@ -198,7 +198,7 @@ h1 {
 }
 
 /* Contact links and the footer email pair a small icon with their label. */
-.contact-links a,.footer a[href^="mailto:"] {
+.contact-links a,.footer a[href^="mailto:"],.section-intro a {
   display:inline-flex;
   align-items:center;
   gap:7px
